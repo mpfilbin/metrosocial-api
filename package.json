@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "The API application for the Windows Modern UI client to DigitalVellum.",
   "main": "app.js",
-  "engine": "node >= 0.8.14",
+  "engines": {
+    "node": ">= 0.8.14",
+    "npm": "1.1.65"
+  },
   "scripts": {
     "test": "make test-unit"
   },
@@ -30,9 +33,9 @@
   ],
   "license": "BSD",
   "dependencies": {
-    "restify": "~1.4.4",
+    "restify": "1.4.4",
     "nconf": "~0.6.5",
-    "bunyan": "~0.16.5"
+    "bunyan": "0.16.5"
   },
   "devDependencies": {
     "mocha": "~1.7.0",
