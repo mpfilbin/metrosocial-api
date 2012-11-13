@@ -1,0 +1,41 @@
+{
+  "name": "metrovellum",
+  "version": "0.0.0",
+  "description": "The API application for the Windows Modern UI client to DigitalVellum.",
+  "main": "app.js",
+  "engine": "node >= 0.8.14",
+  "scripts": {
+    "test": "make test-unit"
+  },
+  "repository": "",
+  "keywords": [
+    "API",
+    "Metro",
+    "Windows",
+    "8",
+    "Modern",
+    "UI",
+    "touch"
+  ],
+  "author": "Michael Filbin <mikefi@ecollege.com>",
+  "contributors": [
+    {
+      "name": "Shawn Feldman",
+      "email": "shawnf@ecollege.com"
+    },
+    {
+      "name": "Eric Peterson",
+      "email": "ericpeterson@ecollege.com"
+    }
+  ],
+  "license": "BSD",
+  "dependencies": {
+    "restify": "~1.4.4",
+    "nconf": "~0.6.5",
+    "bunyan": "~0.16.5"
+  },
+  "devDependencies": {
+    "mocha": "~1.7.0",
+    "should": "~1.2.1"
+  }
+}

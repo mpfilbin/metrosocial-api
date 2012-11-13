@@ -1,0 +1,7 @@
+{
+    "APP_NAME" : "MetroVellum API",
+    "APP_VERSION" : "0.0.0",
+    "APP_MIMETYPES" : ["application/json"],
+    "SERVER_PORT" : 8080
+
+}
