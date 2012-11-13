@@ -12,7 +12,7 @@ module.exports = function(app){
       restifyDefaultResponseHeaders = response.defaultResponseHeaders;
     }
     response.defaultResponseHeaders = function (data) {
-      restifyDefaultResponseHeaders.call(res, data);
+      restifyDefaultResponseHeaders.call(response, data);
       response.setHeader('Access-Control-Allow-Headers', 'Accept, Accept-Version, Content-Length, Content-MD5, ' +
         'Content-Type, Content-Range, Date, X-Api-Version, X-Authorization');
     };
