@@ -1,13 +1,17 @@
 {
-    "APP_NAME"                  : "MetroSocial API",
-    "APP_VERSION"               : "0.0.0",
-    "APP_MIMETYPES"             : ["application/json"],
-    "SERVER_PORT"               : 8080,
-    "PERSONAL_HOME_HOST"        : "https://ph-api.ecollege.com",
-    "AFFINITY_ASSERTION_PATH"   : "/me/affinityAssertion",
-    "PERSONA_HOST"              : "https://persona.ecollege.com",
-    "AFFINITY_TOKEN_SERVICE"    : "/Affinity/v1/session?Authorization=",
-    "OPENCLASS_LOGIN_HOST"      : "https://login.pearsonopenclass.com",
-    "AUTH_SERVICE"              : "/service/identity/login/basic",
-    "USER_ANNOUNCEMENTS_SERVICE": "/me/userannouncements?v=2"
+    "APP_NAME"                     : "MetroSocial API",
+    "APP_VERSION"                  : "0.0.0",
+    "APP_MIMETYPES"                : ["application/json"],
+    "SERVER_PORT"                  : 8080,
+    "PERSONAL_HOME_HOST"           : "https://ph-api.ecollege.com",
+    "AFFINITY_ASSERTION_PATH"      : "/me/affinityAssertion",
+    "PERSONA_HOST"                 : "https://persona.ecollege.com",
+    "MAPI_HOST"                    : "https://m-api.ecollege.com",
+    "AFFINITY_TOKEN_SERVICE"       : "/Affinity/v1/session?Authorization=",
+    "OPENCLASS_LOGIN_HOST"         : "https://login.pearsonopenclass.com",
+    "AUTH_SERVICE"                 : "/service/identity/login/basic",
+    "USER_ANNOUNCEMENTS_SERVICE"   : "/me/userannouncements?v=2",
+    "UPCOMING_EVENTS_SERVICE"      : "/me/UpcomingEvents?from=11/15/2012&until=11/22/2012",
+    "DROPBOX_SUBMISSIONS_SERVICE"  : "/me/ForReview/DropboxSubmissions",
+    "SUBMISSION_FOR_REVIEW_SERVICE": "/me/ForReview/ExamSubmissions"
 }

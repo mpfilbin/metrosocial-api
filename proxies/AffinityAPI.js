@@ -31,7 +31,7 @@ function makeAffinityAssertion(authToken, callback) {
   var client = restify.createJsonClient({
     url    : this.personalHomeHost,
     headers: {
-      "X-Authorization": ("Access_Token access_token=" + authToken)
+      "X-Authorization": (authToken)
     },
     retry  : {
       retries: 3

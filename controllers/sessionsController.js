@@ -26,7 +26,7 @@ SessionsController.prototype.createNewSession = function createNewSession(reques
       self.authProxy.getWhittakerIDMToken(credentials, asyncCallback);
     },
     function (token, asyncCallback) {
-      authToken = token;
+      authToken = "Access_Token access_token=" + token;
       self.affinityProxy.getAffinityToken(authToken, asyncCallback);
     }
   ], callback);
@@ -38,8 +38,8 @@ SessionsController.prototype.createNewSession = function createNewSession(reques
       affinityToken = data;
 
       response.send(201, {token: authToken});
+      next();
     }
-    // Do something with data
   }
 };
 
