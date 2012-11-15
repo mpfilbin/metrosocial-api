@@ -1,12 +1,11 @@
-var path = require('path');
 var async = require('async');
-var AffinityProxy = require(path.join('./../proxies/AffinityAPI.js'));
-var AuthenticationProxy = require(path.join('./../proxies/AuthenticationAPI.js'));
+var AffinityProxy = require('./../proxies/AffinityAPI.js');
+var AuthenticationProxy = require('./../proxies/AuthenticationAPI.js');
 
 function SessionsController() {
   this.affinityProxy = new AffinityProxy();
   this.authProxy = new AuthenticationProxy();
-};
+}
 
 SessionsController.prototype.createNewSession = function createNewSession(request, response, next) {
   var self = this;
