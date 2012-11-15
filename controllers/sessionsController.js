@@ -36,7 +36,8 @@ SessionsController.prototype.createNewSession = function createNewSession(reques
       response.send(error);
     } else {
       affinityToken = data;
-      response.send(201, authToken);
+
+      response.send(201, {token: authToken});
     }
     // Do something with data
   }
