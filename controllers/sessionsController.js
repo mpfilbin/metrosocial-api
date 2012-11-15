@@ -1,7 +1,7 @@
 var path = require('path');
 var async = require('async');
-var AffinityProxy = require(path.join(__dirname, '..', 'proxies', 'AffinityAPI.js'));
-var AuthenticationProxy = require(path.join(__dirname, '..', 'proxies', 'AuthenticationAPI.js'));
+var AffinityProxy = require(path.join('./', '..', 'proxies', 'AffinityAPI.js'));
+var AuthenticationProxy = require(path.join('./', '..', 'proxies', 'AuthenticationAPI.js'));
 
 function SessionsController() {
   this.affinityProxy = new AffinityProxy();

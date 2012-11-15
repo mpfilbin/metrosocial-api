@@ -1,7 +1,7 @@
 var path = require('path');
 var restify = require('restify');
 var nconf = require('nconf');
-var Errors = require(path.join(__dirname, '..', 'errors'));
+var Errors = require(path.join('./', '..', 'errors'));
 
 
 function AuthenticationAPI() {

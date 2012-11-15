@@ -6,7 +6,7 @@ module.exports = function(app){
   app.use(restify.queryParser());
   app.use(restify.bodyParser());
   app.use(restify.conditionalRequest());
-  require(path.join(__dirname, 'patchHeaders'))(app);
-  require(path.join(__dirname, 'cors'))(app);
+  require('./patchHeaders.js')(app);
+  require('./cors.js')(app);
   return app;
 };

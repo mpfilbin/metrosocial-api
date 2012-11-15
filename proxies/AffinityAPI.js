@@ -2,7 +2,7 @@ var nconf = require('nconf');
 var restify = require('restify');
 var path = require('path');
 var async = require('async');
-var Errors = require(path.join(__dirname, '..', 'errors'));
+var Errors = require(path.join('./', '..', 'errors'));
 
 function AffinityAPI() {
   this.personalHomeHost = nconf.get("PERSONAL_HOME_HOST");
