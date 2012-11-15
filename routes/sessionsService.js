@@ -1,5 +1,6 @@
 var path = require('path');
-var SessionsController = require(path.join(__dirname, '..', 'controllers', 'SessionsController'));
+var SessionsController = require(path.join(__dirname, '..', 'controllers', 'SessionsController.js'));
+
 module.exports = function(app){
   var controller = new SessionsController();
 
