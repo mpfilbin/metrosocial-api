@@ -1,8 +1,8 @@
 var path = require('path');
-var PersonalHomeAPI = require(path.join(__dirname, '..', 'proxies', 'PersonalHomeAPI'));
+var WSODAPI = require(path.join(__dirname, '..', 'proxies', 'WSODAPI'));
 
 function AnnouncementsController(){
-  this.proxy = new PersonalHomeAPI();
+  this.proxy = new WSODAPI();
 }
 
 AnnouncementsController.prototype.getAnnouncementsCollection = function getAnnouncementsCollection(request, response, next){
