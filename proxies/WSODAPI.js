@@ -2,6 +2,7 @@ var path = require('path');
 var nconf = require('nconf');
 var restify = require('restify');
 var Errors = require(path.join(__dirname, '..', 'errors'));
+var helpers = require(path.join(__dirname, '..', 'helpers'));
 
 function PersonalHomeAPI() {
   this.userAnnSvc = nconf.get("USER_ANNOUNCEMENTS_SERVICE");
@@ -22,26 +23,8 @@ PersonalHomeAPI.prototype.getAnnouncements = function getAnnouncements(authToken
       retries: 3
     }
   });
-  return client.get(this.userAnnSvc, handleResponse.bind(this, callback));
+  return client.get(this.userAnnSvc, helpers.handleResponse.bind(this, callback));
 };
-
-function handleResponse(callback, err, request, response, JSONPayLoad) {
-  var error, data;
-  switch (true === true) {
-    case err && err.message:
-      error = new Errors.InternalServerError(err.message);
-      break;
-    case response && response.statusCode !== 200:
-      error = new Errors.BadGatewayError("Request to: " + request.path + "failed");
-      break;
-    case JSONPayLoad && Object.keys(JSONPayLoad).length > 0:
-      data = JSONPayLoad;
-      break;
-    default:
-      break;
-  }
-  callback(error, data);
-}
 
 module.exports = PersonalHomeAPI;
 

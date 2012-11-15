@@ -23,9 +23,16 @@ function InvalidCredentialsError(message){
   return new restify.InvalidCredentialsError(message);
 }
 
+function UnauthorizedError(message){
+  restify.RestError.call(this, 401, "UnauthorizedError", message, UnauthorizedError);
+  this.message = "Unauthorized to perform the requested action";
+}
+util.inherits(UnauthorizedError, restify.RestError);
+
 module.exports = {
   BadGatewayError    : BadGatewayError,
   InternalServerError: InternalServerError,
   ArgumentError      : ArgumentError,
-  InvalidCredentialsError : InvalidCredentialsError
+  InvalidCredentialsError : InvalidCredentialsError,
+  UnauthorizedError: UnauthorizedError
 };
