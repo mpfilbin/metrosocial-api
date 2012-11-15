@@ -1,7 +1,12 @@
 {
-    "APP_NAME" : "MetroVellum API",
-    "APP_VERSION" : "0.0.0",
-    "APP_MIMETYPES" : ["application/json"],
-    "SERVER_PORT" : 8080
-
+    "APP_NAME"               : "MetroSocial API",
+    "APP_VERSION"            : "0.0.0",
+    "APP_MIMETYPES"          : ["application/json"],
+    "SERVER_PORT"            : 8080,
+    "PERSONAL_HOME_HOST"     : "https://ph-api.ecollege.com",
+    "AFFINITY_ASSERTION_PATH": "/me/affinityAssertion",
+    "PERSONA_HOST"           : "https://persona.ecollege.com",
+    "AFFINITY_TOKEN_SERVICE" : "/Affinity/v1/session?Authorization=",
+    "OPENCLASS_LOGIN_HOST"   : "https://login.pearsonopenclass.com",
+    "AUTH_SERVICE"           : "/service/identity/login/basic"
 }

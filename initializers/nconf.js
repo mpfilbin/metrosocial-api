@@ -12,7 +12,7 @@ module.exports = function (app) {
 
     nconf.argv()
       .env()
-      .defaults(JSON.parse(data.toString()))
+      .defaults(JSON.parse(data))
       .file(environmentalConfig);
   } catch (error) {
     app.log && app.log.error(error);
