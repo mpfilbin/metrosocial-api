@@ -13,5 +13,7 @@
     "USER_ANNOUNCEMENTS_SERVICE"   : "/me/userannouncements?v=2",
     "UPCOMING_EVENTS_SERVICE"      : "/me/UpcomingEvents",
     "DROPBOX_SUBMISSIONS_SERVICE"  : "/me/ForReview/DropboxSubmissions",
-    "SUBMISSION_FOR_REVIEW_SERVICE": "/me/ForReview/ExamSubmissions"
+    "SUBMISSION_FOR_REVIEW_SERVICE": "/me/ForReview/ExamSubmissions",
+    "SUBWAY_HOST"                  : "ws://subway.pearsonopenclass.com",
+    "SOCIAL_STREAM_SERVICE"        : "/socket.io/1/websocket"
 }
