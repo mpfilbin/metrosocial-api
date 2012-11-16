@@ -22,5 +22,11 @@ PersonalHomeAPI.prototype.getExams = function getExams(authToken, callback) {
   return client.get(this.submissionsService, helpers.handleResponse.bind(this, callback));
 };
 
+PersonalHomeAPI.prototype.getEvents = function getEvents(authToken, callback) {
+  if (!authToken) return callback(new Error.InvalidCredentialsError("Missing authentication token"));
+  var client = helpers.createJSONClient(nconf.get("PERSONAL_HOME_HOST"), {"x-authorization": authToken});
+  return client.get(this.eventsService, helpers.handleResponse.bind(this, callback));
+};
+
 
 module.exports = PersonalHomeAPI;
