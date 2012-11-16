@@ -32,7 +32,7 @@ PostsController.prototype.getPosts = function getPosts(request, response, next) 
 
 function getData() {
   if (this.data && this.data.length > 0) {
-    return {posts:this.data.slice(0, getRandomInt(requestCount, data.posts.length))};
+    return {posts:this.data.slice(0, getRandomInt(0, this.data.length))};
   } else {
     this.data = _.clone(Data);
     return data;
