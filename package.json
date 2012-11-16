@@ -39,7 +39,8 @@
     "redis": "~0.8.2",
     "hiredis": "~0.1.14",
     "async": "~0.1.22",
-    "socket.io": "~0.9.11"
+    "socket.io": "~0.9.11",
+    "moment": "~1.7.2"
   },
   "devDependencies": {
     "mocha": "~1.7.0",

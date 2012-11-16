@@ -11,7 +11,7 @@
     "OPENCLASS_LOGIN_HOST"         : "https://login.pearsonopenclass.com",
     "AUTH_SERVICE"                 : "/service/identity/login/basic",
     "USER_ANNOUNCEMENTS_SERVICE"   : "/me/userannouncements?v=2",
-    "UPCOMING_EVENTS_SERVICE"      : "/me/UpcomingEvents?from=11/15/2012&until=11/22/2012",
+    "UPCOMING_EVENTS_SERVICE"      : "/me/UpcomingEvents",
     "DROPBOX_SUBMISSIONS_SERVICE"  : "/me/ForReview/DropboxSubmissions",
     "SUBMISSION_FOR_REVIEW_SERVICE": "/me/ForReview/ExamSubmissions"
 }
