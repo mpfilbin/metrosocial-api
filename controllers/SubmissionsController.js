@@ -6,7 +6,7 @@ function SubmissionsController(){
 }
 
 SubmissionsController.prototype.getSubmissions = function getSubmission(request, response, next){
-  var authtoken = helpers.getxauthheaders(request.headers);
+  var authtoken = helpers.getXAuthHeaders(request.headers);
   this.proxy.getsubmissions(authtoken, getsubmissionscallback);
 
   function getsubmissionscallback(error, submissions){
