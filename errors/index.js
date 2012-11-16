@@ -19,20 +19,35 @@ function ArgumentError(message) {
 }
 util.inherits(ArgumentError, restify.RestError);
 
-function InvalidCredentialsError(message){
+function InvalidCredentialsError(message) {
   return new restify.InvalidCredentialsError(message);
 }
 
-function UnauthorizedError(message){
+function UnauthorizedError(message) {
   restify.RestError.call(this, 401, "UnauthorizedError", message, UnauthorizedError);
   this.message = "Unauthorized to perform the requested action";
 }
 util.inherits(UnauthorizedError, restify.RestError);
 
+function NullDataStoreKeyError(message) {
+  restify.RestError.call(this, 500, "NullDataStoreKeyError", message, NullDataStoreKeyError);
+  this.message = "The requested key has a null value";
+}
+util.inherits(NullDataStoreKeyError, restify.RestError);
+
+function DataStoreError(message) {
+  restify.RestError.call(this, 500, "DataStoreError", message, DataStoreError);
+  this.message = "An error occured accessing the Database";
+}
+
+util.inherits(DataStoreError, restify.RestError);
+
 module.exports = {
-  BadGatewayError    : BadGatewayError,
-  InternalServerError: InternalServerError,
-  ArgumentError      : ArgumentError,
-  InvalidCredentialsError : InvalidCredentialsError,
-  UnauthorizedError: UnauthorizedError
+  BadGatewayError        : BadGatewayError,
+  InternalServerError    : InternalServerError,
+  ArgumentError          : ArgumentError,
+  InvalidCredentialsError: InvalidCredentialsError,
+  UnauthorizedError      : UnauthorizedError,
+  NullDataStoreKeyError  : NullDataStoreKeyError,
+  DataStoreError         : DataStoreError
 };

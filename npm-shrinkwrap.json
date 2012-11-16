@@ -131,6 +131,9 @@
     "moment": {
       "version": "1.7.2"
     },
+    "websocket-client": {
+      "version": "1.0.0"
+    },
     "should": {
       "version": "1.2.1"
     },

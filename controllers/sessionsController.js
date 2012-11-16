@@ -1,10 +1,14 @@
 var async = require('async');
+var util = require('util');
 var AffinityProxy = require('./../proxies/AffinityAPI.js');
 var AuthenticationProxy = require('./../proxies/AuthenticationAPI.js');
+var EventEmitter = require('events').EventEmitter;
 
 function SessionsController() {
   this.affinityProxy = new AffinityProxy();
   this.authProxy = new AuthenticationProxy();
+//  this.dataClient = redisClient;
+//  this.emitter = emitter;
 }
 
 SessionsController.prototype.createNewSession = function createNewSession(request, response, next) {
@@ -35,8 +39,9 @@ SessionsController.prototype.createNewSession = function createNewSession(reques
     if (error) {
       response.send(error);
     } else {
-      affinityToken = data;
-
+      affinityToken = data.affinityToken;
+//      self.emitter.emit("AffinityTokenReceived", affinityToken);
+//      self.dataClient.set('affinityToken', affinityToken);
       response.send(201, {token: authToken});
       next();
     }

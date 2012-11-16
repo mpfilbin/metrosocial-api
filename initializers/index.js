@@ -5,4 +5,5 @@ module.exports = function(app){
   require('./nconf.js')(app);
   require('./logger.js')(app);
   require('./application.js')(app);
+//  require(path.join(__dirname, 'redis'))(app);
 };
