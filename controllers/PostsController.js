@@ -12,6 +12,8 @@ function PostsController() {
 }
 
 PostsController.prototype.getPosts = function getPosts(request, response, next) {
+  requestCount += 1;
+
   var result = getData.call(this);
   response.send(200, result);
   next();
@@ -30,11 +32,14 @@ PostsController.prototype.getPosts = function getPosts(request, response, next) 
 
 function getData() {
   if (this.data && this.data.length > 0) {
-    data.posts.push(this.data.pop());
-    return data;
+    return {posts:this.data.slice(0, getRandomInt(requestCount, data.posts.length))};
   } else {
     this.data = _.clone(Data);
     return data;
   }
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 module.exports = PostsController;
